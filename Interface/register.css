@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    padding-top: 100px; 
+    background-image: url('assets/10.png');
+    background-size:cover;
+    background-position: center -10%; 
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(201, 148, 201);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.nav-logo {
+    height: 100px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url("logo.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.border {
+    border: 2px solid transparent;
+}
+
+.border:hover {
+    border: 2px solid white;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-item p {
+    margin-left: 5px;
+}
+
+.container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.registration-form label {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.registration-form input,
+.registration-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    padding: 10px;
+    background-color: #82104f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #434190;
+}
+
+.registration-form label[for="terms"] {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.registration-form label[for="terms"] input {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}

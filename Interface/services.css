@@ -1,0 +1,178 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+:root {
+--primary-color: #6e3667;
+--secondary-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar {
+height: 100px;
+background-color:rgb(201, 148, 201);
+color:white;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+}
+
+.nav-logo {
+height: 100px;
+width: 100px;
+}
+
+.logo {
+background-image: url("assets/logo.png");
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+
+.border {
+border: 2px solid transparent;
+}
+
+.border:hover {
+border: 2px solid white;
+}
+
+.nav-item {
+display: flex;
+align-items: center;
+font-size: 1.2rem;
+cursor: pointer;
+}
+
+.nav-item p {
+margin-left: 5px;
+}
+
+#service-section {
+min-height: 740px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+#service-section h2 {
+color: rgb(51, 3, 51);
+font-size: 2rem;
+margin-bottom: 20px;
+position: relative;
+}
+
+#service-section h2::after {
+position: absolute;
+content: " ";
+top: 30%;
+left: -30px;
+height: 0;
+width: 0;
+border-top: 20px solid transparent;
+border-left: 20px solid var(--primary-color);
+}
+
+#service-section h2::before {
+position: absolute;
+content: " ";
+top: 30%;
+right: -30px;
+height: 0;
+width: 0;
+border-top: 20px solid transparent;
+border-right: 20px solid var(--primary-color);
+}
+
+#service-section #paragraph {
+width: 40%;
+font-size: 1rem;
+color: rgb(129, 43, 129);
+text-align: center;
+line-height: 1.5rem;
+margin-bottom: 40px;
+text-transform: uppercase;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+z-index: 9;
+margin-top: 20px;
+}
+
+.card {
+min-height: 350px;
+width: 450px;
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+padding: 0 8%;
+background: rgb(201, 148, 201);
+position: relative;
+border-radius: 10px;
+margin: 0 10px;
+}
+
+.card::before {
+position: absolute;
+content: " ";
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+border-radius: 10px;
+background: var(--primary-color);
+transform: rotate(0deg);
+z-index: -1;
+}
+
+.card:hover::before {
+transform: rotate(10deg);
+}
+
+.card i {
+font-size: 2.5rem;
+color: var(--primary-color);
+margin-top: 40px;
+margin-bottom: 10px;
+}
+
+.card h3 {
+font-size: 1.8rem;
+color: #fff;
+margin-bottom: 10px;
+}
+
+.card .content p {
+color:#333333;
+font-size: 1.05rem;
+margin-bottom: 20px;
+font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+#service-section h2 {
+    margin-top: 30px;
+}
+.cards {
+    grid-template-columns: repeat(1, 1fr);
+}
+#service-section #paragraph {
+    width: 80%;
+}
+}
+
+@media (max-width: 900px) {
+.card {
+    height: 300px;
+    width: 400px;
+    margin: 20px 0;
+}
+}

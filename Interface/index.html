@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niramaya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-item border">
+                <a href="/about.html">
+                <i class="fa-solid fa-users"></i>
+                <p>About Us</p></a>
+            </div>
+            <div class="nav-item border">
+                <a href="/services.html">
+                <i class="fa-solid fa-briefcase"></i>
+                <p>Services</p></a>
+            </div>
+            <div class="nav-item border">
+                <a href="/register.html">
+                <i class="fa-solid fa-user"></i>
+                <p>Register</p></a>
+            </div>
+            <div class="nav-item border">
+                <a href="/login.html">
+                <i class="fa-solid fa-circle-user"></i>
+                <p>Login</p></a>
+            </div>
+            <div class="nav-item border">
+                <a href="/contact.html">
+                <i class="fa-solid fa-phone"></i>
+                <p>Contact Us</p></a>
+            </div>
+        </div>
+    </header>
+    <div class="hero-section border">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <div class="text">
+                    <h1 class="title">"Niramaya"</h1>
+                    <p class="content">Niramaya: Derived from “Nir” (without) and “Amaya” (disease).Your Gateway to Advanced Healthcare Solutions. 
+                        Experience cutting-edge disease diagnosis through AI image recognition, 
+                        ensuring precise and swift identification of medical conditions.
+                         Our RFID-tagged medication system guarantees error-free drug administration
+                          by securely storing patient data and medication details, revolutionizing patient
+                           care.
+                    </p>
+                </div>
+                <div class="image" style="background-image: url('assets/logo.png');"></div>
+            </div>
+            <div class="slide fade">
+                <div class="text">
+                    <h1 class="title">"AI Diagnostics: Precision Through Imaging"</h1>
+                    <p class="content">Niramaya harnesses the power of AI-driven image 
+                        recognition to deliver rapid and precise disease diagnosis.
+                         Our advanced technology interprets medical images with exceptional accuracy, 
+                         enabling healthcare professionals to detect and respond to conditions more 
+                         effectively than ever before.</p>
+                </div>
+                <div class="image" style="background-image: url('assets/AI.webp');"></div>
+            </div>
+            <div class="slide fade">
+                <div class="text">
+                    <h1 class="title">"RFID: Ensuring Precision in Medication Management"
+                    </h1>
+                    <p class="content">Niramaya utilizes advanced RFID technology to streamline medication processes,
+                         dramatically cutting down on errors and ensuring each patient 
+                        receives the correct treatment swiftly and safely.</p>
+                </div>
+                <div class="image" style="background-image: url('assets/medication.jpg');"></div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="hero-msg">
+        <p>"Healthcare is not just about treating illnesses, 
+            but about enhancing the quality of life with compassion, precision, and innovation."</p>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2>Diagnosis</h2>
+            <p>Perform AI-powered diagnostics for fast, accurate disease detection!</p>
+        </div>
+        <div class="box">
+            <h2>Medication</h2>
+            <p>Ensure accurate medication with RFID tags!</p>
+        </div>
+        <div class="box">
+            <h2>Connectivity</h2>
+            <p>Seamless hospital-to-hospital connectivity!</p>
+        </div>
+        <div class="box">
+            <h2>Register</h2>
+            <p>Register to access all features!</p>
+        </div>
+    </div>
+    <footer>
+    <div class="footer-container">
+        <div class="social-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></i></a>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy;2024; Designed By<span class="designer">Megha & Yashika</span></p>
+    </div>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "flex";  
+        }
+        setInterval(function() {
+            plusSlides(1);
+        }, 10000); 
+    </script>
+</body>
+</html>

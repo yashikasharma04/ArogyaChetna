@@ -1,0 +1,139 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+background-color: #f3e9f7;
+background-image: url('assets/8.jpg');
+background-size: cover;
+background-position:center 15%;
+background-repeat: no-repeat;
+
+}
+
+.navbar {
+height: 100px;
+background-color: #ad73ad;
+color: white;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+}
+
+.nav-logo {
+height: 100px;
+width: 100px;
+}
+
+.logo {
+background-image: url("assets/logo.png");
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+
+.border {
+border: 2px solid transparent;
+}
+
+.border:hover {
+border: 2px solid white;
+}
+
+.nav-item {
+display: flex;
+align-items: center;
+font-size: 1.2rem;
+cursor: pointer;
+}
+
+.nav-item p {
+margin-left: 5px;
+}
+
+.container {
+width: 80%;
+margin: 60px auto;
+display: flex;
+justify-content: space-between;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.contact, .content {
+flex: 1;
+min-width: 300px;
+padding: 25px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h1, .content h1 {
+font-size: 35px;
+margin-bottom: 20px;
+color: #2c1c5c;
+}
+
+.content h2 {
+margin-top: 20px;
+margin-bottom: 10px;
+color: #82104f;
+}
+
+.content p {
+color: #222;
+font-size: 17px;
+line-height: 1.4;
+}
+
+label {
+color: #222;
+font-size: 17px;
+display: block;
+margin-top: 12px;
+margin-bottom: 5px;
+}
+
+input, textarea {
+width: 100%;
+padding: 12px;
+border-radius: 5px;
+border: 2px solid #ad73ad;
+outline: none;
+background-color: #f9f3fc;
+color: #333;
+}
+
+input:focus, textarea:focus {
+border-color: #82104f;
+}
+
+button {
+font-size: 17px;
+background-color: #82104f;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+cursor: pointer;
+margin-top: 15px;
+transition: background-color 0.3s;
+}
+
+button:hover {
+background-color: #7a2d58;
+}
+
+@media screen and (max-width: 768px) {
+.container {
+    flex-direction: column;
+}
+.contact, .content {
+    margin-bottom: 30px;
+}
+}
